@@ -12,17 +12,7 @@ const Nav = styled.nav`
 `
 
 function Header() {
-  return (
-    <>
-      <Logo>Hello, ReactDC</Logo>
-      <Nav>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About</NavLink>
-        <NavLink href="/contact">Contact</NavLink>
-        <NavLink href="/blog">Blog</NavLink>
-      </Nav>
-    </>
-  )
+  return <Logo>Hello, ReactDC</Logo>
 }
 
 export default memo(Header)
