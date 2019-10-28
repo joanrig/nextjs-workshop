@@ -1,10 +1,9 @@
 // See more at https://nextjs.org/docs#custom-app
 import React from 'react'
 import App from 'next/app'
-import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyle, Layout, theme } from 'components'
+import { theme } from 'components'
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -24,15 +23,7 @@ class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
-        <>
-          <Head>
-            <title>NextJS Demo</title>
-          </Head>
-          <GlobalStyle />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </>
+        <Component {...pageProps} />
       </ThemeProvider>
     )
   }
