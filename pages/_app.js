@@ -1,6 +1,7 @@
 // See more at https://nextjs.org/docs#custom-app
 import React from 'react'
 import App from 'next/app'
+import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
 import { theme, GlobalStyle } from 'components'
@@ -25,6 +26,9 @@ class MyApp extends App {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
+          <Head>
+            <title>NextJS Demo</title>
+          </Head>
           <Component {...pageProps} />
         </>
       </ThemeProvider>
