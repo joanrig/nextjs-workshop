@@ -3,7 +3,7 @@ import React from 'react'
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
 
-import { theme } from 'components'
+import { theme, GlobalStyle } from 'components'
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -23,7 +23,10 @@ class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </>
       </ThemeProvider>
     )
   }

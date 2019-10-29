@@ -30,7 +30,13 @@ const Page = styled.div`
 `
 
 function Layout({ children }) {
-  return <>{children}</>
+  return (
+    <Container>
+      <Header />
+      <Page>{children}</Page>
+      <Footer />
+    </Container>
+  )
 }
 
 Layout.propTypes = {
